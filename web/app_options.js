@@ -40,7 +40,7 @@ const defaultOptions = {
   },
   defaultZoomValue: {
     /** @type {string} */
-    value: '',
+    value: 'page-width',
     kind: OptionKind.VIEWER + OptionKind.PREFERENCE,
   },
   disableHistory: {
