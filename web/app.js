@@ -1550,6 +1550,20 @@ function loadAndEnablePDFBug(enabledTabs) {
   });
 }
 
+/**
+ * 更新工具条上按钮的状态
+ */
+function applyButtonStatus(params) {
+  if ('download' in params && params.download === 'false') {
+    document.getElementById('download').disabled = true;
+  }
+
+  if ('print' in params && params.print === 'false') {
+    document.getElementById('print').disabled = true;
+  }
+
+}
+
 function webViewerInitialized() {
   let appConfig = PDFViewerApplication.appConfig;
   let file;
@@ -1557,6 +1571,8 @@ function webViewerInitialized() {
     let queryString = document.location.search.substring(1);
     let params = parseQueryString(queryString);
     file = 'file' in params ? params.file : AppOptions.get('defaultUrl');
+
+    applyButtonStatus(params);
     validateFileURL(file);
   } else if (PDFJSDev.test('FIREFOX || MOZCENTRAL')) {
     file = window.location.href.split('#')[0];

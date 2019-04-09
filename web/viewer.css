@@ -911,6 +911,14 @@ html[dir="rtl"] .toolbarButton.pageDown::before {
   content: url(images/toolbarButton-download.png);
 } */
 
+.toolbarButton.rotateCcw::before {
+  content: url(images/secondaryToolbarButton-rotateCcw.png);
+}
+
+.toolbarButton.rotateCw::before {
+  content: url(images/secondaryToolbarButton-rotateCw.png);
+}
+
 .toolbarButton.bookmark,
 .secondaryToolbarButton.bookmark {
   box-sizing: border-box;
@@ -1009,13 +1017,13 @@ html[dir="rtl"] .secondaryToolbarButton > span {
   content: url(images/secondaryToolbarButton-lastPage.png);
 }
 
-.secondaryToolbarButton.rotateCcw::before {
+/* .secondaryToolbarButton.rotateCcw::before {
   content: url(images/secondaryToolbarButton-rotateCcw.png);
 }
 
 .secondaryToolbarButton.rotateCw::before {
   content: url(images/secondaryToolbarButton-rotateCw.png);
-}
+} */
 
 .secondaryToolbarButton.selectTool::before {
   content: url(images/secondaryToolbarButton-selectTool.png);
